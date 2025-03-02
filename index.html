@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de prueba</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-bold">
+
+    <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-50 bg-white">
+        <nav class="flex justify-between py-2">
+            <a class="font-semibold text-xl" href="#">
+                <h1>MacBook Air</h1>
+            </a>
+            <div class="flex items-center">
+                <button class="px-4">
+                    <img class="w-5 h-5" src="./assets/icons/closed-icon.png" alt="icono cerrado">
+                </button>
+                <button class="bg-blue-600 text-white rounded-full">
+                    <a class="text-[12px] px-[10px] py-[3px] flex" href="#">Comprar</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="hidden">
+        <ul>
+            <li class=""><a class="" href="#">Especificaciones</a></li>
+            <li class=""><a class="" href="#">Caracteristicas</a></li>
+            <li class=""><a class="" href="#">Reseñas</a></li>
+        </ul>
+    </aside>
+    
+    <main class="mt-18">
+        <section class="">
+            <img class="mx-auto" src="./assets/images/hero-static-s.jpg" alt="macbook air">
+            <div class="mt-10 mx-5">
+                <h2 class="text-[40px] font-semibold leading-tight">
+                    Superligera. Superchip M3.
+                </h2>
+                <p class="text-[24px] font-medium mt-6 text-gray-500 leading-tight">La <span class="text-black">MacBook Air</span> es la compañera ideal para trabajar y divertirse al máximo. Con la llegada del <span class="text-black">chip M3</span>, la laptop más popular del mundo es capaz de hacer cosas aún más increíbles. Y como ofrece hasta 18 horas de batería2, puede arrasar con cualquier tarea en cualquier lugar.</p>
+                <p class="mt-3 text-lg font-medium">MacBook Air con chip M3</p>
+                <p class="mt-3 text-lg font-medium">MacBook Air con chip M2</p>
+            </div>
+        </section>
+        <section class="">
+            <div class="mt-20">
+                <p class="font-medium mx-5">DISEÑO SUPERPOTENTE</p>
+                <h2 class="text-4xl font-semibold mx-5">
+                    Tiene todo <br class="block md:hidden"> para llegar lejos.
+                </h2>
+                <div class="h-[330px] flex items-center mt-20 overflow-hidden">
+                    <img class="scale-200 z-0" src="./assets/images/design_hero_static-s.jpg" alt="macbook air">
+                </div>
+                <p class="text-xl font-medium mt-10 text-gray-500 mx-5"><span class="text-black">Es superligera y tiene poco más de un centímetro de grosor</span>. La MacBook Air con chip M3 encaja a la perfección en tu vida y en la vida del planeta. Está hecha con un 50% de materiales reciclados, todo un hito para Apple. Y como buena MacBook Air, tiene una resistente carcasa de aluminio reciclado.</p>
+                <p class="mt-4 text-lg mx-5">MacBook Air con chip M3</p>
+                <p class="mt-4 text-lg mx-5">MacBook Air con chip M2</p>
+            </div>
+            <div class="mt-10 mx-5 relative">
+                <img class="w-full" src="./assets/images/design_sizes_small.jpg" alt="macbook air de perfil">
+                <p class="text-xl font-medium absolute top-1/5 left-1/7">Pantalla <br> de <br><span class="text-4xl">13''</span></p>                
+                <p class="text-xl font-medium absolute top-1/5 right-1/7">Pantalla <br> de <br><span class="text-4xl">15''</span></p>
+
+                <p class="text-2xl font-medium mt-6 text-gray-500"><span class="text-black">Dos tamaños perfectos para llevar.</span> El modelo de 13 pulgadas es la laptop portátil por excelencia, y el de 15 pulgadas tiene más pantalla para que puedas hacer más cosas a la vez.<sup>3</sup> </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full bg-gray-100 text-gray-600 text-xs py-4 px-5 mt-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center">
+                    <p>Copyright © 2025 Apple Inc. Todos los derechos reservados.</p>
+                </div>
+                <div class="mt-2 md:mt-0">
+                    <ul class="flex flex-wrap">
+                        <li class="mr-4"><a href="#" class="hover:text-gray-900">Política de privacidad</a></li>
+                        <li class="mr-4"><a href="#" class="hover:text-gray-900">Aviso legal</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
