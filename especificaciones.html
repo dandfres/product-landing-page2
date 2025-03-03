@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de prueba</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="">
+
+    <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-50 bg-white">
+        <nav class="flex justify-between py-2">
+            <a class="font-semibold text-xl" href="#">
+                <h1>MacBook Air</h1>
+            </a>
+            <div class="flex items-center">
+                <button class="px-4">
+                    <img class="w-5 h-5" src="./assets/icons/closed-icon.png" alt="icono cerrado">
+                </button>
+                <button class="bg-blue-600 text-white rounded-full">
+                    <a class="text-[12px] px-[10px] py-[3px] flex" href="#">Comprar</a>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <aside class="hidden">
+        <ul>
+            <li class=""><a class="" href="#">Especificaciones</a></li>
+            <li class=""><a class="" href="#">Caracteristicas</a></li>
+            <li class=""><a class="" href="#">Reseñas</a></li>
+        </ul>
+    </aside>
+    <!-- Seccion principal -->
+    <main class="mt-25">
+        <section class="mx-5 text-[1.125rem]">
+            <div class="flex justify-center gap-5">
+                <button id="size-13" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer">13 pulgadas</button>
+                <button id="size-15" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer">15 pulgadas</button>
+            </div>
+            <img id="product-image" class="mt-13 w-60 mx-auto" src="./assets/images/size_13_hero_small.jpg" alt="Una MacBook Air de 13 pulgadas">
+        </section>
+        <section class="mt-18 mx-5">
+            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Acabado</h2>
+            <div class="mr-5 mt-12">
+                <img src="./assets/images/mba_13_colors_small.jpg" alt="Colores de la Macbook Air">
+            </div>
+            <p class="mt-6 text-lg">Color plata, Blanco estelar, Gris espacial, Medianoche</p>  
+        </section>
+        <section class="mt-18 mx-5">
+            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Pantalla</h2>
+            <div>
+                <div class="mt-10">
+                    <p class="font-medium text-lg mb-1">Pantalla Liquid Retina</p>
+                    <p class="text-lg">Pantalla de 13.6 pulgadas(diagonal) retroiluminada por LED con tecnología IPS <sup class="text-xs">1</sup>; resolución nativa de 2560 x 1664 a 224 pixeles por pulgada</p>
+                    <p class="text-lg">Brillo de 500 nits</p>
+                </div>
+                <div>
+                    <p class="font-medium text-lg mb-1">Colores</p>
+                    <p class="text-lg">Compatible con 1,000 millones de colores</p>
+                    <p class="text-lg">Amplia gama de colores (P3)</p>
+                    <p class="text-lg">Tecnología True Tone</p>
+                </div>
+                <img class="mt-10 w-[15.625rem]" src="./assets/images/mba_13_display_small.jpg" alt="Colores de la Macbook Air">
+            </div>
+        </section>
+        <section class="mt-18 mx-5">
+            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Batería y energía<sup class="text-xs">2</sup></h2>
+            <div class="mt-10 text-lg">
+                <p>Hasta 18 horas de reproducción de video en la app Apple TV</p>
+                <p>Hasta 15 horas de navegación web inalámbrica</p>
+                <p>Batería de polímero de litio de 52.6 Wh</p>
+                <p>Adaptador de corriente USB-C de 30 W (incluido en los modelos con chip M2 y chip M3 con GPU de 8 núcleos)</p>
+                <p>Adaptador de corriente compacto de 35 W con dos puertos USB-C (incluido en los modelos con chip M2 y chip M3 con GPU de 10 núcleos y 512 GB de almacenamiento; opcional en los modelos con chip M2 y chip M3 con GPU de 8 núcleos)</p>
+                <p>Cable de USB-C a MagSafe 3</p>
+                <p>Carga rápida con el adaptador de corriente USB-C de 70 W</p>
+            </div>
+        </section>
+        <section class="mt-12 mx-5">
+            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Apps integradas<sup class="text-xs">7</sup></h2>
+            <div class="grid grid-cols-3 text-center mt-10 mx-4 gap-2">
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_appstore.png" alt="icono de appstore"><figcaption class="text-xs mt-1">App Store</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_shortcuts.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Atajos</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_stocks.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Bolsa</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_calendar.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Calendario</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_home.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Casa</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_weather.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Clima</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_tips.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Consejos</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_contacts.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Contactos</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_passwords.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Contraseñas</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_iphonemirroring.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Duplicación del iPhone</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_findmy.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Encontrar</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_facetime.png" alt="icono de appstore"><figcaption class="text-xs mt-1">FaceTime</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_photos.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Fotos</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_freeform.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Freeform</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_garageband.png" alt="icono de appstore"><figcaption class="text-xs mt-1">GarageBand</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_imovie.png" alt="icono de appstore"><figcaption class="text-xs mt-1">iMovie</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_keynote.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Keynote</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_books.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Libros</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_mail.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Mail</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_maps.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Mapas</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_messages.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Mensajes</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_music.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Música</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_notes.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Notas</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_photobooth.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Photo Booth</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_podcasts.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Podcast</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_quicktime.png" alt="icono de appstore"><figcaption class="text-xs mt-1">QuickTime Player</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_reminders.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Recordatorios</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_safari.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Safari</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_timemachine.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Time Machine</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_tv.png" alt="icono de appstore"><figcaption class="text-xs mt-1">TV</figcaption></figure>
+                <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_preview.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Vista Previa</figcaption></figure>
+            </div>
+        </section>
+
+    </main>
+    <!-- Pie de pagina -->
+    <footer class="w-full bg-gray-100 text-gray-600 text-xs py-4 px-5 mt-10">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center">
+                    <p>Copyright © 2025 Apple Inc. Todos los derechos reservados.</p>
+                </div>
+                <div class="mt-2 md:mt-0">
+                    <ul class="flex flex-wrap">
+                        <li class="mr-4"><a href="#" class="hover:text-gray-900">Política de privacidad</a></li>
+                        <li class="mr-4"><a href="#" class="hover:text-gray-900">Aviso legal</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Mapa del sitio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- importacion del script -->
+    <script src="./script.js"></script>
+</body>
+</html>
