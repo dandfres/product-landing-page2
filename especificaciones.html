@@ -7,30 +7,44 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class="">
-
-    <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-50 bg-white">
+    <!-- HEADER -->
+    <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-40 bg-white">
+        <!-- NAVBAR -->
         <nav class="flex justify-between py-2">
-            <a class="font-semibold text-xl" href="#">
+            <!-- TITULO -->
+            <a class="font-semibold text-xl" href="./index.html">
                 <h1>MacBook Air</h1>
             </a>
-            <div class="flex items-center">
-                <button class="px-4">
-                    <img class="w-5 h-5" src="./assets/icons/closed-icon.png" alt="icono cerrado">
+
+            <div class="flex items-center gap-3">
+                <!-- BOTON FLECHA -->
+                <button id="menu-toggle" class="cursor-pointer">
+                    <!-- BOTON QUE ROTA -->
+                    <svg id="arrow-icon" class="text-gray-700 w-7 h-7 transition-transform duration-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 9l7 7 7-7"/>
+                    </svg>
                 </button>
+                    <!-- BOTON DE COMPRA -->
                 <button class="bg-blue-600 text-white rounded-full">
                     <a class="text-[12px] px-[10px] py-[3px] flex" href="#">Comprar</a>
                 </button>
             </div>
+            <!-- MENU DESPLEGABLE (ENCIMA DEL CONTENIDO) -->
+            <div id="mobile-menu" class="absolute opacity-0 scale-y-0 origin-top left-0 top-full w-full h-screen backdrop-blur-2xl transition-all duration-600">
+                <ul class="bg-white py-5 border-gray-300 font-light flex-col items-center border-b-1 text-red">
+                    <li class="mx-4 px-4">
+                        <a class="font-[400] text-gray-700 hover:text-black flex py-2" href="./index.html">Descripción</a>
+                    </li>
+                    <li class="mx-4 px-4">
+                        <a class="font-[400] text-gray-700 hover:text-black flex py-2" href="./especificaciones.html">Especificaciones</a>
+                    </li>
+                    <li class="mx-4 px-4">
+                        <a class="font-[400] text-gray-700 hover:text-black flex py-2" href="./valoraciones.html">Valoraciones</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-
-    <aside class="hidden">
-        <ul>
-            <li class=""><a class="" href="#">Especificaciones</a></li>
-            <li class=""><a class="" href="#">Caracteristicas</a></li>
-            <li class=""><a class="" href="#">Reseñas</a></li>
-        </ul>
-    </aside>
     <!-- Seccion principal -->
     <main class="mt-25">
         <section class="mx-5 text-[1.125rem]">
