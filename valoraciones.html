@@ -6,19 +6,33 @@
     <title>Pagina de prueba</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body class="">
+<body class="text-gray-800 flex flex-col min-h-screen">
     <!-- HEADER -->
     <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-40 bg-white">
         <!-- NAVBAR -->
-        <nav class="flex justify-between py-2">
+        <nav class="flex justify-between mx-auto py-2 lg:w-5xl">
             <!-- TITULO -->
-            <a class="font-semibold text-xl" href="#">
+            <a class="font-semibold text-xl" href="./index.html">
                 <h1>MacBook Air</h1>
             </a>
 
             <div class="flex items-center gap-3">
+                <!-- MENU DESKTOP -->
+                <div class="text-sm text-gray-600 hidden lg:block">
+                    <ul class="flex gap-3">
+                        <li>
+                            <a href="/index.html">Descripción</a>
+                        </li>
+                        <li>
+                            <a href="./especificaciones.html">Especificaciones</a>
+                        </li>
+                        <li>
+                            <a href="./valoraciones.html">Valoraciones</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- BOTON FLECHA -->
-                <button id="menu-toggle" class="cursor-pointer">
+                <button id="menu-toggle" class="cursor-pointer lg:hidden">
                     <!-- BOTON QUE ROTA -->
                     <svg id="arrow-icon" class="text-gray-700 w-7 h-7 transition-transform duration-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 9l7 7 7-7"/>
@@ -26,7 +40,7 @@
                 </button>
                     <!-- BOTON DE COMPRA -->
                 <button class="bg-blue-600 text-white rounded-full">
-                    <a class="text-[12px] px-[10px] py-[3px] flex" href="#">Comprar</a>
+                    <a class="text-[12px] px-[10px] py-[3px] flex" href="./compra.html">Comprar</a>
                 </button>
             </div>
             <!-- MENU DESPLEGABLE (ENCIMA DEL CONTENIDO) -->
@@ -47,18 +61,18 @@
     </header>
 
     <!-- MAIN -->
-    <main class="mt-15 mx-5 text-gray-800">
-        <section>
-            <form id="review-form" class="mt-5 px-6 py-1 bg-gray-100 rounded-xl shadow-[0_0_2px_#0004]" method="post">
+    <main class="mt-15 mx-auto lg:w-5xl flex-1">
+        <section class="md:px-20 mx-5 md:text-lg">
+            <form id="review-form" class="my-5 px-6 py-1 bg-gray-100 rounded-xl shadow-[0_0_2px_#0004] md:px-15 lg:px-20" method="post">
                 <fieldset class="my-3 mt-5 space-y-2 text-center">
-                    <legend class="text-2xl font-semibold">Escribe una reseña</legend>
-                    <div class="py-2 text-start space-y-2">
+                    <legend class="text-2xl font-semibold sm:text-3xl">Escribe una reseña</legend>
+                    <div class="py-2 text-start space-y-2 md:space-y-3">
                         <div class="space-y-2">
-                            <label for="name" class="block text-lg font-medium">Nombre</label>
+                            <label for="name" class="block text-lg font-medium md:text-xl">Nombre</label>
                             <input id="name" type="text" placeholder="Ingresa tu nombre" required class="outline-1 outline-gray-300 rounded-sm pl-1 w-full">
                         </div>
-                        <div class="space-y-2">
-                            <p class="text-lg font-medium">Elige un tamaño</p>
+                        <div class="space-y-2 md:space-y-3">
+                            <p class="text-lg font-medium md:text-xl">Elige un tamaño</p>
                             <div class="flex space-x-3 ml-2">
                                 <div class="">
                                     <input id="13in" value="13 Pulgadas" type="radio" name="size-option" required>
@@ -70,29 +84,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="space-y-2">
-                            <p class="text-lg font-medium">Escoge un color</p>
-                            <div class="ml-2 space-y-1">
+                        <div class="space-y-2 md:space-y-3">
+                            <p class="text-lg font-medium md:text-xl">Escoge un color</p>
+                            <div class="ml-2 space-y-1 md:space-y-2">
                                 <div>
-                                    <input id="midnight-color" value="medianoche" type="radio" name="color-option" required>
+                                    <input id="midnight-color" value="Medianoche" type="radio" name="color-option" required>
                                     <label for="midnight-color">Medianoche</label>
                                 </div>
                                 <div>
-                                    <input id="white-color" value="blanco estelar" type="radio" name="color-option">
+                                    <input id="white-color" value="Blanco estelar" type="radio" name="color-option">
                                     <label for="white-color">Blanco estelar</label>
                                 </div>
                                 <div>
-                                    <input id="gray-color" value="gris espacial" type="radio" name="color-option">
+                                    <input id="gray-color" value="Gris espacial" type="radio" name="color-option">
                                     <label for="gray-color">Gris espacial</label>
                                 </div>
                                 <div>
-                                    <input id="plate-color" value="color plata" type="radio" name="color-option">
+                                    <input id="plate-color" value="Color plata" type="radio" name="color-option">
                                     <label for="plate-color">Color plata</label>
                                 </div>
                             </div>               
                         </div>
-                        <div class="space-y-2">
-                            <p class="text-lg font-medium">Comparte tu opinión</p>
+                        <div class="space-y-2 md:space-y-3">
+                            <p class="text-lg font-medium md:text-xl">Comparte tu opinión</p>
                             <label for="comment"></label>
                             <textarea id="comment" name="" rows="3" class="w-full outline-1 outline-gray-300 rounded-sm pl-1" required placeholder="Escribe un breve comentario . . ."></textarea>
                         </div>
@@ -102,15 +116,20 @@
                     </div>
                 </fieldset>
             </form>
-            <h1 class="text-3xl font-semibold mt-5">Comentarios del producto</h1>
-
-            <div id="reviews-container" class="mt-5 space-y-5"></div>
-            
         </section>
+        <div class="">
+            <h1 class="text-3xl font-semibold mt-5">Comentarios del producto</h1>
+            
+            <div id="reviews-container" class="my-5 space-y-5 md:px-20 md:text-lg">
+                <!-- AQUI SE INSERTAN LOS COMENTARIOS -->
+            </div>
+        </div>
     </main>
 
     <!-- ENLACE DEL SCRIPT -->
-    <script src="./script.js"></script>
+    <script src="./script.js">
+
+    </script>
 
     <!-- PIE DE PAGINA -->
     <footer class="w-full bg-gray-100 text-gray-600 text-xs py-4 px-5 mt-10">

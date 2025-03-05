@@ -67,13 +67,14 @@ formData.addEventListener('submit', function(event) {
     let review = document.getElementById('comment').value;
     //  crear el div donde se mostrara los datos de los input
     let reviewItem = document.createElement("div");
-    reviewItem.classList.add("p-4", "border-gray-200", "border-b-1", "rounded-xl", "bg-gray-100", "break-words");
+    reviewItem.classList.add("p-4", "border-gray-200", "border-b-1", "rounded-xl", "bg-gray-100", "break-words", "md:p-8");
 
     reviewItem.innerHTML =`
     <strong>${userName}</strong>
-    <p class="font-light text-sm">${deviceSize}</p>
-    <p class="font-light text-sm">${deviceColor}</p>
-    <p>${review}</p>`;
+    <p class="font-light text-sm md:text-base">${deviceSize}</p>
+    <p class="font-light text-sm md:text-base">${deviceColor}</p>
+    <p>${review}</p>
+    `;
     //  agregar la reseña final al div creado
     document.getElementById('reviews-container').appendChild(reviewItem);
     //  reseteear el formulario

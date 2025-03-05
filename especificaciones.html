@@ -6,19 +6,33 @@
     <title>Pagina de prueba</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body class="">
+<body class="text-gray-800 flex flex-col min-h-screen">
     <!-- HEADER -->
     <header class="px-4 border-b-1 border-gray-400 fixed top-0 w-full z-40 bg-white">
         <!-- NAVBAR -->
-        <nav class="flex justify-between py-2">
+        <nav class="flex justify-between mx-auto py-2 lg:w-5xl">
             <!-- TITULO -->
             <a class="font-semibold text-xl" href="./index.html">
                 <h1>MacBook Air</h1>
             </a>
 
             <div class="flex items-center gap-3">
+                <!-- MENU DESKTOP -->
+                <div class="text-sm text-gray-600 hidden lg:block">
+                    <ul class="flex gap-3">
+                        <li>
+                            <a href="/index.html">Descripción</a>
+                        </li>
+                        <li>
+                            <a href="./especificaciones.html">Especificaciones</a>
+                        </li>
+                        <li>
+                            <a href="./valoraciones.html">Valoraciones</a>
+                        </li>
+                    </ul>
+                </div>
                 <!-- BOTON FLECHA -->
-                <button id="menu-toggle" class="cursor-pointer">
+                <button id="menu-toggle" class="cursor-pointer lg:hidden">
                     <!-- BOTON QUE ROTA -->
                     <svg id="arrow-icon" class="text-gray-700 w-7 h-7 transition-transform duration-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 9l7 7 7-7"/>
@@ -26,7 +40,7 @@
                 </button>
                     <!-- BOTON DE COMPRA -->
                 <button class="bg-blue-600 text-white rounded-full">
-                    <a class="text-[12px] px-[10px] py-[3px] flex" href="#">Comprar</a>
+                    <a class="text-[12px] px-[10px] py-[3px] flex" href="./compra.html">Comprar</a>
                 </button>
             </div>
             <!-- MENU DESPLEGABLE (ENCIMA DEL CONTENIDO) -->
@@ -46,41 +60,72 @@
         </nav>
     </header>
     <!-- Seccion principal -->
-    <main class="mt-25">
+    <main class="mt-25 mx-auto lg:w-5xl flex-1">
         <section class="mx-5 text-[1.125rem]">
             <div class="flex justify-center gap-5">
-                <button id="size-13" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer">13 pulgadas</button>
-                <button id="size-15" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer">15 pulgadas</button>
+                <button id="size-13" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer md:px-10 md:py-4">13 pulgadas</button>
+                <button id="size-15" class="border-gray-300 border-2 px-4 py-3 rounded-sm cursor-pointer md:px-10 md:py-4">15 pulgadas</button>
             </div>
-            <img id="product-image" class="mt-13 w-60 mx-auto" src="./assets/images/size_13_hero_small.jpg" alt="Una MacBook Air de 13 pulgadas">
+            <img id="product-image" class="mt-13 w-60 mx-auto md:mt-20" src="./assets/images/size_13_hero_small.jpg" alt="Una MacBook Air de 13 pulgadas">
         </section>
-        <section class="mt-18 mx-5">
-            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Acabado</h2>
+
+        <div class="border-b-1 border-gray-400 mt-12 mx-5 hidden md:block"></div>
+
+        <section class="mt-18 mx-5 md:flex md:mt-12">
+            <div class="md:pr-18">
+                <h2 class="text-2xl font-semibold pb-4 md:text-[22px] lg:text-2xl">Acabado</h2>
+                <div class="border-b-1 border-gray-400 md:hidden"></div>
+            </div>
             <div class="mr-5 mt-12">
-                <img src="./assets/images/mba_13_colors_small.jpg" alt="Colores de la Macbook Air">
-            </div>
-            <p class="mt-6 text-lg">Color plata, Blanco estelar, Gris espacial, Medianoche</p>  
-        </section>
-        <section class="mt-18 mx-5">
-            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Pantalla</h2>
-            <div>
-                <div class="mt-10">
-                    <p class="font-medium text-lg mb-1">Pantalla Liquid Retina</p>
-                    <p class="text-lg">Pantalla de 13.6 pulgadas(diagonal) retroiluminada por LED con tecnología IPS <sup class="text-xs">1</sup>; resolución nativa de 2560 x 1664 a 224 pixeles por pulgada</p>
-                    <p class="text-lg">Brillo de 500 nits</p>
+                <picture>
+                    <source srcset="./assets/images/mba_13_colors_large.jpg" media="(min-width: 1024px)">
+                    <source srcset="./assets/images/mba_13_colors_medium.jpg" media="(min-width: 640px)">
+                    <img src="./assets/images/mba_13_colors_small.jpg" alt="Colores de la Macbook Air">
+                </picture>
+                <div class="mt-6 text-lg flex justify-between flex-wrap md:mx-3">
+                    <p class="text-base">Color plata<span class="mr-1 md:hidden">,</span></p>
+                    <p class="text-base">Blanco estelar<span class="mr-1 md:hidden">,</span></p>
+                    <p class="text-base">Gris espacial<span class="mr-1 md:hidden">,</span></p>
+                    <p class="text-base">Medianoche<span class="mr-1 md:hidden">,</span></p>
                 </div>
-                <div>
-                    <p class="font-medium text-lg mb-1">Colores</p>
-                    <p class="text-lg">Compatible con 1,000 millones de colores</p>
-                    <p class="text-lg">Amplia gama de colores (P3)</p>
-                    <p class="text-lg">Tecnología True Tone</p>
-                </div>
-                <img class="mt-10 w-[15.625rem]" src="./assets/images/mba_13_display_small.jpg" alt="Colores de la Macbook Air">
             </div>
         </section>
-        <section class="mt-18 mx-5">
-            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Batería y energía<sup class="text-xs">2</sup></h2>
-            <div class="mt-10 text-lg">
+
+        <div class="border-b-1 border-gray-400 mt-12 mx-5 hidden md:block"></div>
+
+        <section class="mt-18 mx-5 md:flex md:mt-12">
+            <div class="md:pr-18">
+                <h2 class="text-2xl font-semibold pb-4 md:text-[22px] lg:text-2xl">Pantalla</h2>
+                <div class="border-b-1 border-gray-400 md:hidden"></div>
+            </div>
+            <div class="">
+                <div class="mt-10 md:mt-0 text-lg">
+                    <p class="font-medium mb-1">Pantalla Liquid Retina</p>
+                    <p>Pantalla de 13.6 pulgadas(diagonal) retroiluminada por LED con tecnología IPS <sup class="text-xs">1</sup>; resolución nativa de 2560 x 1664 a 224 pixeles por pulgada</p>
+                    <p>Brillo de 500 nits</p>
+                </div>
+                <div class="text-lg">
+                    <p class="font-medium mb-1">Colores</p>
+                    <p>Compatible con 1,000 millones de colores</p>
+                    <p>Amplia gama de colores (P3)</p>
+                    <p>Tecnología True Tone</p>
+                </div>
+                <picture>
+                    <source srcset="./assets/images/mba_13_display_large.jpg" media="(min-width: 1024px)">
+                    <source srcset="./assets/images/mba_13_display_medium.jpg" media="(min-width: 640px)">
+                    <img class="mt-10" src="./assets/images/mba_13_display_small.jpg" alt="Colores de la Macbook Air">
+                </picture>
+            </div>
+        </section>
+
+        <div class="border-b-1 border-gray-400 mt-12 mx-5 hidden md:block"></div>
+        
+        <section class="mt-18 mx-5 md:flex md:mt-12">
+            <div class="md:pr-18">
+                <h2 class="text-2xl font-semibold pb-4 md:text-[22px] lg:text-2xl">Batería y energía<sup class="text-xs">2</sup></h2>
+                <div class="border-b-1 border-gray-400 md:hidden"></div>
+            </div>
+            <div class="mt-10 text-lg md:mt-0">
                 <p>Hasta 18 horas de reproducción de video en la app Apple TV</p>
                 <p>Hasta 15 horas de navegación web inalámbrica</p>
                 <p>Batería de polímero de litio de 52.6 Wh</p>
@@ -90,9 +135,15 @@
                 <p>Carga rápida con el adaptador de corriente USB-C de 70 W</p>
             </div>
         </section>
-        <section class="mt-12 mx-5">
-            <h2 class="text-2xl font-semibold border-b-1 border-gray-400 pb-4">Apps integradas<sup class="text-xs">7</sup></h2>
-            <div class="grid grid-cols-3 text-center mt-10 mx-4 gap-2">
+        
+        <div class="border-b-1 border-gray-400 mt-12 mx-5 hidden md:block"></div>
+
+        <section class="mt-12 mx-5 md:flex md:mt-12">
+            <div class="">
+                <h2 class="text-2xl font-semibold pb-4 md:text-[22px] lg:text-2xl">Apps integradas<sup class="text-xs">7</sup></h2>
+                <div class="border-b-1 border-gray-400 md:hidden"></div>
+            </div>
+            <div class="grid grid-cols-3 text-center mt-10 mx-4 gap-2 md:grid-cols-5 md:mt-0 lg:grid-cols-6">
                 <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_appstore.png" alt="icono de appstore"><figcaption class="text-xs mt-1">App Store</figcaption></figure>
                 <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_shortcuts.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Atajos</figcaption></figure>
                 <figure class="flex flex-col items-center pb-8"><img class="w-13 h-13" src="./assets/icons/icon_stocks.png" alt="icono de appstore"><figcaption class="text-xs mt-1">Bolsa</figcaption></figure>
